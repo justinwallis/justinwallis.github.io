@@ -1,46 +1,57 @@
-# Chirpy Starter [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)](https://rubygems.org/gems/jekyll-theme-chirpy) [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+# Justin Wallis Lab Notes
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file from the theme's gem. If you have ever installed this theme gem, you can use the command `bundle info --path jekyll-theme-chirpy` to locate these files.
+This repository powers a public-safe engineering notebook for systems, homelab, automation, storage, monitoring, and AI-assisted media workflows.
 
-The Jekyll organization claims that this is to leave the ball in the user’s court, but this also results in users not being able to enjoy the out-of-the-box experience when using feature-rich themes.
+The goal is to publish **reusable architecture and code without publishing the private environment that inspired it**.
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your Jekyll site. The following is a list of targets:
+## Current focus
 
-```shell
-.
-├── _config.yml
-├── _data
-├── _plugins
-├── _tabs
-└── index.html
+- Self-hosted services and automation
+- NAS/NVR storage architecture
+- Media ingest and production pipelines
+- Monitoring and deal-watch workflows
+- Networking and infrastructure patterns
+- Privacy-safe examples of real operational systems
+
+## Privacy boundary
+
+Examples in this repository are intentionally sanitized. Public material should never include:
+
+- real private IP addresses or hostnames
+- credentials, API tokens, keys, or cookies
+- camera locations, blind spots, or security topology
+- property maps, addresses, or floor plans
+- serial numbers or unique device identifiers
+- private NAS share names when they reveal internal structure
+- raw surveillance archives or private family footage
+- production secrets or configuration exports copied from live systems
+
+Use synthetic names such as `camera-a`, `nas-01`, and RFC1918 example addresses when documentation needs concrete examples.
+
+## First project
+
+**Wallis Lab Media Pipeline** documents a privacy-safe version of a real-world workflow:
+
+```text
+capture devices
+    ↓
+private NVR / surveillance retention
+    ↓ selected exports only
+NAS production ingest
+    ↓
+organize / verify / proxy
+    ↓
+AI-assisted edit
+    ↓
+short-form derivatives
+    ↓
+private or unlisted review
+    ↓
+publish
 ```
 
-In order to save your time, and to prevent you from missing some files when copying, we extract those files/configurations of the latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+Security recording and media production remain separate systems. The NVR is optimized for rolling surveillance retention; the NAS is the long-term production library.
 
-## Prerequisites
+## Main site
 
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll` and `Bundler`.
-
-## Installation
-
-[**Use this template**][use-template] to generate a brand new repository and name it `<GH_USERNAME>.github.io`, where `GH_USERNAME` represents your GitHub username.
-
-Then clone it to your local machine and run:
-
-```
-$ bundle
-```
-
-## Usage
-
-Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+Portfolio and professional work: https://justinwallis.com
